@@ -159,8 +159,9 @@ class Input:
 def main():
     debug = len(sys.argv) > 1 and sys.argv[1] == "debug"
     input = Input(debug)
-    for _ in range(3):
-        input.getLine("> ")
+    nlines = 3
+    for i in range(nlines):
+        input.getLine(f"[{i+1}/{nlines}] > ")
 
 
 if __name__ == "__main__":
